@@ -10,6 +10,19 @@
     <title>SistemaGyC</title>
 </head>
 <body>
-    
+    <header>
+        <div class="logo__Principal"></div>
+    </header>
+
+    <main>
+        <form class="login">
+            <fieldset class="login__formulario">
+                <legend class="login__login">Login</legend>
+                <input class="input" type="text" name="usuario" placeholder="Usuario">
+                <input class="input" type="password" name="contraseña" placeholder="contraseña">
+                <button type="submit">Ingresar</button>
+            </fieldset>
+        </form>
+    </main>
 </body>
 </html>
