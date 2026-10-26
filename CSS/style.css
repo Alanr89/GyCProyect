@@ -1,0 +1,39 @@
+:root{
+  /* Colors de Identidad (Logo) */
+  --primary-red: #E62425;       /* Rojo del logo para acentos */
+  --primary-red-hover: #C81E1F; /* Rojo un poco más oscuro para cuando pasas el cursor */
+
+  /* Neutros Oscuros (Textos y Navegación) */
+  --text-main: #1C1C1E;         /* Texto principal de alta legibilidad */
+  --text-muted: #6C757D;        /* Textos secundarios o placeholders */
+  --sidebar-bg: #1A1D20;        /* Un sidebar oscuro sobrio y profesional */
+
+  /* Neutros Claros (Fondos y Tarjetas) */
+  --bg-main: #F4F6F8;           /* Fondo del <main> (descansa la vista) */
+  --bg-card: #FFFFFF;           /* Fondo blanco para tarjetas/tablas/forms */
+  --border-color: #DEE2E6;       /* Borde sutil para inputs y contenedores */
+
+  /* Colores de Estado (Feedback del sistema) */
+  --success: #28A745;           /* Verde para confirmaciones */
+  --warning: #FFC107;           /* Amarillo para advertencias */
+  --danger: #DC3545;            /* Rojo para errores / borrar */
+}
+
+/* GLobales */
+
+html{
+		font-size: 62.5%;
+		box-sizing: border-box;
+    }
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+		font-size: 16px
+}
+
+
+/* -------------login -----------------*/
+
