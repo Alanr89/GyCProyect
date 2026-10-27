@@ -1,0 +1,42 @@
+:root{
+    --azulMarino: #0B2545;
+    --azulAcero: #134074;
+    --grisMuyclaro: #EEF4F8;
+    --blanco: #ffffff;
+    --grisNeutro: #94A3B8;
+    --fuenteHeading: 'Roboto', sans-serif;
+    --fuenteParrafo: 'Open Sans', sans-serif;
+
+}
+
+/* Globales */
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size; 16 px;
+    font-family: var(--fuenteParrafo);
+    line-height: 2;
+}
+
+h1, h2, h3,h4 {
+    font-family: var(--fuenteHeading);
+}
+h1{
+    font-size: 4.8rem;
+}
+h2 {
+    font-size: 4rem;
+}
+h3{
+    font-size: 3.2rem;
+}
+h4{
+    font-size: 2.8rem;
+}
