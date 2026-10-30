@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,7 +19,11 @@
         </a>
         <nav class="navegacion">
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="menu-label">☰</label>
+            <label for="menu-toggle" class="menu-label">
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+                <span class="menu-line"></span>
+            </label>
             <ul class="navegacion__lista">
                 <li><a class="navegacion__enlace" href="#">Sobre Nosotros</a></li>
                 <li><a class="navegacion__enlace" href="#">Planes</a></li>
@@ -28,8 +32,95 @@
         </nav>
     </header>
     <main>
+        <section class="carousel">
+            <div class="carousel__container">
+                <div class="carousel__slides">
+                    <div class="carousel__slide" style="background-image: url('Assets/Electricista.jpg')">
+                        <div class="carousel__overlay"></div>
+                        <div class="carousel__content">
+                            <h2 class="carousel__title">Servicios Eléctricos</h2>
+                            <p class="carousel__text">Instalación y mantenimiento eléctrico para tu hogar y negocio.</p>
+                        </div>
+                    </div>
+                    <div class="carousel__slide" style="background-image: url('Assets/Plomeria.jpeg')">
+                        <div class="carousel__overlay"></div>
+                        <div class="carousel__content">
+                            <h2 class="carousel__title">Plomería</h2>
+                            <p class="carousel__text">Soluciones integrales de fontanería y reparación de fugas.</p>
+                        </div>
+                    </div>
+                    <div class="carousel__slide" style="background-image: url('Assets/CallCenter.jpeg')">
+                        <div class="carousel__overlay"></div>
+                        <div class="carousel__content">
+                            <h2 class="carousel__title">Centro de Llamadas</h2>
+                            <p class="carousel__text">Atención al cliente 24/7 para resolver tus consultas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel__btn carousel__btn--prev">&#10094;</button>
+                <button class="carousel__btn carousel__btn--next">&#10095;</button>
+
+                <div class="carousel__indicators">
+                    <span class="carousel__indicator carousel__indicator--active" data-slide="0"></span>
+                    <span class="carousel__indicator" data-slide="1"></span>
+                    <span class="carousel__indicator" data-slide="2"></span>
+                </div>
+            </div>
+        </section>
 
 
     </main>
+    <script>
+        const slides = document.querySelectorAll('.carousel__slide');
+        const totalSlides = 3;
+        let currentSlide = 0;
+        const indicators = document.querySelectorAll('.carousel__indicator');
+
+        function updateSlide(index) {
+            currentSlide = index;
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('carousel__slide--active', i === currentSlide);
+            });
+            indicators.forEach((ind, i) => {
+                ind.classList.toggle('carousel__indicator--active', i === currentSlide);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateSlide(currentSlide);
+        }
+
+        document.querySelector('.carousel__btn--next').addEventListener('click', () => {
+            nextSlide();
+            resetTimer();
+        });
+
+        document.querySelector('.carousel__btn--prev').addEventListener('click', () => {
+            prevSlide();
+            resetTimer();
+        });
+
+        indicators.forEach(ind => {
+            ind.addEventListener('click', () => {
+                const index = parseInt(ind.getAttribute('data-slide'));
+                updateSlide(index);
+                resetTimer();
+            });
+        });
+
+        let timer = setInterval(nextSlide, 10000);
+
+        function resetTimer() {
+            clearInterval(timer);
+            timer = setInterval(nextSlide, 10000);
+        }
+    </script>
 </body>
 </html>
