@@ -6,7 +6,6 @@
     --grisNeutro: #94A3B8;
     --fuenteHeading: 'Roboto', sans-serif;
     --fuenteParrafo: 'Open Sans', sans-serif;
-
 }
 
 /* Globales */
@@ -20,9 +19,10 @@ html{
 }
 
 body{
-    font-size: 16 px;
+    font-size: 16px;
     font-family: var(--fuenteParrafo);
     line-height: 2;
+    margin: 0;
 }
 
 h1, h2, h3,h4 {
@@ -41,23 +41,149 @@ h4{
     font-size: 2.8rem;
 }
 
-
 /* Header */
 
-header {
+.header {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  padding: 1rem 2 rem;
+  padding: 1rem 5rem;
   position: sticky;
   top: 0;
-  z-index: 1000; /* Importante para que quede por encima del resto del contenido */
-  border-bottom: 0.2rem solid #ccc;   /* ← línea divisoria */
+  z-index: 1000;
+  border-bottom: 0.2rem solid #ccc;
+  background: var(--blanco);
 }
 
-.navegacion{
-    display:flex;
-    gap: 30rem;
+.header__logo {
+    width: 100%;
+    text-align: left;
+}
+
+.logoHeader {
+    height: 10rem;
+    width: auto;
+    display: block;
+}
+
+/* Navegación desktop */
+.navegacion {
+    margin: 0;
+}
+
+.navegacion__lista {
+    display: flex;
+    gap: 4rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion__enlace {
     font-size: 2rem;
-    
+    text-decoration: none;
+    color: var(--azulMarino);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background 0.3s ease, color 0.3s ease;
+    white-space: nowrap;
+}
+
+.navegacion__enlace:hover {
+    background: var(--azulAcero);
+    color: var(--blanco);
+}
+
+/* Checkbox para menú móvil (oculto) */
+.menu-toggle {
+    display: none;
+}
+
+/* Etiqueta hamburguesa */
+.menu-label {
+    display: none;
+    font-size: 3rem;
+    cursor: pointer;
+    color: var(--azulMarino);
+}
+
+/* Responsive - Tablets */
+@media (max-width: 1024px) {
+    html {
+        font-size: 55%;
+    }
+    .header {
+        padding: 1rem 4rem;
+    }
+    .navegacion__lista {
+        gap: 3rem;
+    }
+}
+
+/* Responsive - Móviles */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem 2rem;
+        flex-direction: column;
+    }
+
+    .header__logo {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .logoHeader {
+        height: 10rem;
+        width: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .menu-label {
+        display: block;
+    }
+
+    .navegacion {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .navegacion__lista {
+        flex-direction: column;
+        gap: 2rem;
+        width: 100%;
+        text-align: center;
+        padding: 2rem 0;
+        background: var(--grisMuyclaro);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        box-shadow: 0 2rem 1rem rgba(0,0,0,0.1);
+        z-index: 999;
+    }
+
+    .navegacion__enlace {
+        font-size: 2.5rem;
+        display: block;
+        padding: 1rem 0;
+    }
+
+    /* Mostrar menú cuando se activa el checkbox */
+    .menu-toggle:checked ~ .navegacion__lista {
+        display: flex;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 480px) {
+    html {
+        font-size: 50%;
+    }
+    .header {
+        padding: 1rem 1.5rem;
+    }
 }
