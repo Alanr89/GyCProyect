@@ -531,3 +531,18 @@ html {
 }
 
 /* ----------------------------- seccion de  "nuestros servicios" ---------------------------------------- */
+
+.box__card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.box__card--servicio h3{
+    font-size: 2rem;
+    font-family: var(--fuenteHeading);
+}
+
+.box__card--servicio p{
+    font-size: 1.5rem;
+    font-family: var(--fuenteParrafo);
+}
