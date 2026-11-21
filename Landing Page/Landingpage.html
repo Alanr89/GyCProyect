@@ -39,7 +39,7 @@
         <section class="carousel">
             <div class="carousel__container">
                 <div class="carousel__slides">
-                    <div class="carousel__slide" style="background-image: url('Assets/Electricista.webp')">
+                    <div class="carousel__slide carousel__slide--active" style="background-image: url('Assets/Electricista.webp')">
                         <div class="carousel__overlay"></div>
                         <div class="carousel__content">
                             <h2 class="carousel__title">Servicios Eléctricos</h2>
@@ -86,11 +86,8 @@ Consultanos y coordinamos.</p>
                 <button class="carousel__btn carousel__btn--prev">&#10094;</button>
                 <button class="carousel__btn carousel__btn--next">&#10095;</button>
 
-                <div class="carousel__indicators">
-                    <span class="carousel__indicator carousel__indicator--active" data-slide="0"></span>
-                    <span class="carousel__indicator" data-slide="1"></span>
-                    <span class="carousel__indicator" data-slide="2"></span>
-                    <span class="carousel__indicator" data-slide="3"></span>
+                <div class="carousel__indicators" id="carousel-indicators">
+                    <!-- Los indicadores se generan automáticamente por JS -->
                 </div>
             </div>
         </section>
@@ -122,6 +119,21 @@ Consultanos y coordinamos.</p>
         const slides = document.querySelectorAll('.carousel__slide');
         const totalSlides = slides.length;
         let currentSlide = 0;
+        const indicatorsContainer = document.getElementById('carousel-indicators');
+
+        // Generar indicadores dinámicamente
+        slides.forEach((_, i) => {
+            const span = document.createElement('span');
+            span.classList.add('carousel__indicator');
+            if (i === 0) span.classList.add('carousel__indicator--active');
+            span.setAttribute('data-slide', i);
+            span.addEventListener('click', () => {
+                updateSlide(i);
+                resetTimer();
+            });
+            indicatorsContainer.appendChild(span);
+        });
+
         const indicators = document.querySelectorAll('.carousel__indicator');
 
         function updateSlide(index) {
