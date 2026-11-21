@@ -532,17 +532,79 @@ html {
 
 /* ----------------------------- seccion de  "nuestros servicios" ---------------------------------------- */
 
-.box__card{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+.nuestros__servicios{
+    display: flex;
+    justify-content: center;
+    background-color: var(--azulMarino);
+    border-radius: 2rem;
+    margin: 0 2rem;
 }
 
-.box__card--servicio h3{
-    font-size: 2rem;
+.nuestros__servicios--titulo{
     font-family: var(--fuenteHeading);
+    color: var(--grisMuyclaro);
 }
 
-.box__card--servicio p{
-    font-size: 1.5rem;
-    font-family: var(--fuenteParrafo);
+.box__card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 3rem;
+    padding: 5rem;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.box__card--servicio {
+    background-color: rgba(238, 244, 248, 0.7); /* Usando --grisMuyclaro con transparencia */
+    padding: 3rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(148, 163, 184, 0.2); /* Borde sutil usando --grisNeutro */
+}
+
+.box__card--servicio:hover {
+    transform: translateY(-1rem);
+    background-color: rgba(238, 244, 248, 0.9);
+    box-shadow: 0 1rem 2rem rgba(11, 37, 69, 0.1); /* Sombra usando --azulMarino suave */
+}
+
+.box__card--servicio img {
+    width: 6rem;
+    height: 6rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.box__card--servicio:hover img {
+    transform: scale(1.1);
+}
+
+.box__card--servicio h3 {
+    font-size: 2.2rem;
+    color: var(--azulMarino);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.box__card--servicio p {
+    font-size: 1.6rem;
+    color: var(--azulAcero);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Ajustes Responsive para las Cards */
+@media (max-width: 768px) {
+    .box__card {
+        grid-template-columns: 1fr;
+        padding: 3rem 2rem;
+    }
+    
+    .box__card--servicio {
+        padding: 2.5rem;
+    }
 }
