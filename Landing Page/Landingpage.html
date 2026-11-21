@@ -43,14 +43,17 @@
                         <div class="carousel__overlay"></div>
                         <div class="carousel__content">
                             <h2 class="carousel__title">Servicios Eléctricos</h2>
-                            <p class="carousel__text">Instalación y mantenimiento eléctrico para tu hogar y negocio.</p>
+                            <p class="carousel__text">¿Problemas eléctricos o instalaciones nuevas?
+Tableros, cortocircuitos, cableados, iluminación y puesta a punto general. Trabajamos con seguridad, prolijidad y diagnóstico claro para que tu casa o local funcione sin riesgos.
+Consultanos y coordinamos.</p>
                         </div>
                     </div>
                     <div class="carousel__slide" style="background-image: url('Assets/Plomeria.webp')">
                         <div class="carousel__overlay"></div>
                         <div class="carousel__content">
                             <h2 class="carousel__title">Plomería</h2>
-                            <p class="carousel__text">Soluciones integrales de fontanería y reparación de fugas.</p>
+                            <p class="carousel__text">Filtraciones, pérdidas, griferías, cañerías, tanques y destapaciones. Atendemos desde el arreglo puntual hasta el mantenimiento integral, cuidando cada detalle.
+                            Escribinos y te asesoramos.</p>
                         </div>
                     </div>
                     <div class="carousel__slide" style="background-image: url('Assets/tecnicoaire.webp')">
@@ -60,11 +63,22 @@
                             <p class="carousel__text">¿Necesitás instalar tu aire acondicionado? Trabajo prolijo, seguro y con presupuesto claro. Escribinos y coordinamos visita.</p>
                         </div>
                     </div>
+                    
+                    <div class="carousel__slide" style="background-image: url('Assets/camara.webp')">
+                        <div class="carousel__overlay"></div>
+                        <div class="carousel__content">
+                            <h2 class="carousel__title">Instalación de cámaras de seguridad</h2>
+                            <p class="carousel__text">Instalamos sistemas de videovigilancia Dahua con imagen en alta definición, visión nocturna y acceso remoto en tiempo real. Cableado prolijo, configuración completa y asesoramiento en los puntos clave de cobertura.
+                            Consultanos por presupuesto a medida.</p>
+                        </div>
+                    </div>
+                    
                     <div class="carousel__slide" style="background-image: url('Assets/CallCenter.webp')">
                         <div class="carousel__overlay"></div>
                         <div class="carousel__content">
                             <h2 class="carousel__title">Centro de Llamadas</h2>
-                            <p class="carousel__text">Atención al cliente 24/7 para resolver tus consultas.</p>
+                            <p class="carousel__text">Contamos con Call Center propio las 24 horas, los 7 días de la semana. Sin bots eternos ni demoras: atención directa para urgencias, seguimiento de casos y coordinación inmediata.
+                            Grupo Baires SRL — Tu urgencia no espera, nosotros tampoco.</p>
                         </div>
                     </div>
                 </div>
@@ -76,6 +90,7 @@
                     <span class="carousel__indicator carousel__indicator--active" data-slide="0"></span>
                     <span class="carousel__indicator" data-slide="1"></span>
                     <span class="carousel__indicator" data-slide="2"></span>
+                    <span class="carousel__indicator" data-slide="3"></span>
                 </div>
             </div>
         </section>
@@ -105,7 +120,7 @@
     </main>
     <script>
         const slides = document.querySelectorAll('.carousel__slide');
-        const totalSlides = 3;
+        const totalSlides = slides.length;
         let currentSlide = 0;
         const indicators = document.querySelectorAll('.carousel__indicator');
 
