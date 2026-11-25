@@ -552,7 +552,7 @@ html {
     padding: 5rem;
     max-width: 120rem;
     margin: 0 auto;
-}
+
 
 .box__card--servicio {
     background-color: rgba(238, 244, 248, 0.7); /* Usando --grisMuyclaro con transparencia */
