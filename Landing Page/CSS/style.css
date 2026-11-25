@@ -552,7 +552,7 @@ html {
     padding: 5rem;
     max-width: 120rem;
     margin: 0 auto;
-
+}
 
 .box__card--servicio {
     background-color: rgba(238, 244, 248, 0.7); /* Usando --grisMuyclaro con transparencia */
@@ -607,4 +607,26 @@ html {
     .box__card--servicio {
         padding: 2.5rem;
     }
+}
+
+/* ==========================Sección corporativo===============================*/
+
+.corpo__section{
+    display: grid;
+    background-color: #0b2641;
+    grid-template-columns: 2fr 2fr;
+}
+
+.corpo__section--imagen{
+    grid-column: 1/2;
+    background-image: url(../Assets/corporativo.jpg);
+    background-repeat: no-repeat;
+}
+
+.corpo__section--texto,
+.corpo__section--texto h3,
+.corpo__section--texto p,
+.corpo__section--texto li,
+.corpo__section--texto button {
+    color: var(--blanco);
 }
