@@ -183,16 +183,14 @@ Consultanos y coordinamos.</p>
         <p>Sumá un aliado operativo confiable a tu red.</p>
         <a href="https://wa.me/5491125431833?text=Hola%21%20Quisiera%20realizar%20una%20consulta." class="btn-corporativo">Contactar el Área Corporativa</a>
     </div>
-
-
 </section>
 
-<!-- ===============================================Contactanos==========================================================-->
+<!--=============================================Contactanos=================================================================-->
 <section id="contactanos" class="contactanos__box">
     <div class="contactanos__formulario">
         <h2>¿Listo para resolverlo?</h2>
         <p class="contactanos__subtitulo">Completá el formulario y nos ponemos en contacto a la brevedad para ofrecerte la mejor solución.</p>
-        
+
         <!-- ACA PROGRAMAR EL ENVÍO DE MAIL: Conectá este formulario a tu backend (PHP, Node.js, etc.) para que los datos lleguen a tu correo electrónico -->
         <form class="formulario-contacto" action="#" method="POST">
             <div class="campo">
@@ -214,7 +212,7 @@ Consultanos y coordinamos.</p>
             <button type="submit" class="btn-enviar">Enviar Solicitud</button>
         </form>
     </div>
-    
+
     <div class="contactanos__whatsapp">
         <div class="whatsapp__contenido">
             <h2>¿Querés hablar ahora?</h2>
@@ -228,6 +226,49 @@ Consultanos y coordinamos.</p>
 </section>
 
     </main>
+
+    <!-- =============================== FOOTER =============================== -->
+    <footer class="footer">
+        <div class="footer__contenedor">
+            <div class="footer__logo">
+                <img src="Assets/LogoHeader.jpg" alt="Logo Grupo Baires">
+                <div class="footer__datos">
+                    <strong>Grupo Baires SRL</strong>
+                    <p>Soluciones integrales para el hogar y empresas. Electricidad, plomería, gas, aire acondicionado, cámaras de seguridad y más.</p>
+                </div>
+            </div>
+
+            <div class="footer__enlaces">
+                <h4>Enlaces rápidos</h4>
+                <ul class="footer__lista">
+                    <li><a href="#sobre-nosotros">Quienes somos</a></li>
+                    <li><a href="#cards-servicios">Nuestros servicios</a></li>
+                    <li><a href="#corporativo">Corporativo</a></li>
+                    <li><a href="#contactanos">Contactanos</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__redes">
+                <h4>Síguenos</h4>
+                <div class="footer__social">
+                    <a href="https://wa.me/5491150064968?text=Hola%20Grupo%20Baires,%20quisiera%20una%20asesoria." class="social-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+                        <img src="Assets/icons/whatsapp.png" alt="WhatsApp" class="social-icon">
+                    </a>
+                    <a href="#" class="social-link" target="_blank" rel="noopener" aria-label="Facebook">
+                        <img src="Assets/icons/facebook (1).png" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="#" class="social-link" target="_blank" rel="noopener" aria-label="Instagram">
+                        <img src="Assets/icons/logotipo-de-instagram.png" alt="Instagram" class="social-icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer__bottom">
+            <p>© <span id="anio"></span> Grupo Baires SRL. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
     <script>
         const slides = document.querySelectorAll('.carousel__slide');
         const totalSlides = slides.length;

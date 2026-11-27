@@ -783,6 +783,181 @@ html {
     transform: translateY(0);
 }
 
+/* ==========================Footer===============================*/
+
+.footer {
+    background: #071a33;
+    color: var(--blanco);
+    padding: 0;
+    margin-top: 4rem;
+}
+
+.footer__contenedor {
+    max-width: 130rem;
+    margin: 0 auto;
+    padding: 5rem 2rem 3rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.footer__logo img {
+    width: 12rem;
+    height: auto;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.footer__datos strong {
+    display: block;
+    font-size: 1.8rem;
+    color: var(--blanco);
+    margin-bottom: 0.8rem;
+}
+
+.footer__datos p {
+    font-size: 1.4rem;
+    line-height: 1.7;
+    color: #cbd5e1;
+    margin: 0;
+}
+
+.footer__enlaces h4,
+.footer__redes h4 {
+    font-size: 1.7rem;
+    color: var(--blanco);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.footer__enlaces h4::after,
+.footer__redes h4::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.8rem;
+    width: 2rem;
+    height: 0.3rem;
+    background: var(--azulAcero);
+}
+
+.footer__lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer__lista a {
+    text-decoration: none;
+    color: #cbd5e1;
+    font-size: 1.5rem;
+    transition: color 0.3s ease, padding-left 0.2s ease;
+}
+
+.footer__lista a:hover {
+    color: var(--blanco);
+    padding-left: 0.8rem;
+}
+
+/* Redes sociales - solo imágenes PNG sin fondos de color */
+.footer__social {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.social-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+}
+
+.social-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    filter: drop-shadow(0 0.2rem 0.3rem rgba(0, 0, 0, 0.3));
+}
+
+/* Footer bottom */
+.footer__bottom {
+    background: #051226;
+    border-top: 0.15rem solid rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    text-align: center;
+}
+
+.footer__bottom p {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #94a3b8;
+}
+
+/* Responsive Footer */
+@media (max-width: 1024px) {
+    .footer__contenedor {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        padding: 4rem 1.5rem 2rem 1.5rem;
+    }
+
+    .footer__redes {
+        grid-column: span 2;
+    }
+
+    .footer__social {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .social-link {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer__contenedor {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        padding: 3rem 1.5rem 2rem 1.5rem;
+    }
+
+    .footer__logo {
+        text-align: center;
+    }
+
+    .footer__logo img {
+        margin: 0 auto 1.5rem auto;
+    }
+
+    .footer__enlaces h4::after,
+    .footer__redes h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .footer__lista {
+        align-items: center;
+    }
+
+    .footer__lista a:hover {
+        padding-left: 0;
+    }
+
+    .footer__social {
+        justify-content: center;
+    }
+}
+
 /* ==========================Sección Contactanos===============================*/
 
 .contactanos__box {
