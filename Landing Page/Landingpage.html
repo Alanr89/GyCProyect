@@ -34,8 +34,8 @@
                 <!--
                 <li><a class="navegacion__enlace" href="#">Instalación de cámaras de seguridad</a></li>
                 -->
-                <li><a class="navegacion__enlace" href="#">Corporativo</a></li>
-                <li><a class="navegacion__enlace" href="#">Contactanos</a></li>
+                <li><a class="navegacion__enlace" href="#corporativo">Corporativo</a></li>
+                <li><a class="navegacion__enlace" href="#contactanos">Contactanos</a></li>
             </ul>
         </nav>
     </header>
@@ -158,7 +158,7 @@ Consultanos y coordinamos.</p>
         </section>
 
 <!-- ===============================================Corporativo=============================================================--> 
-<section class="corpo__section">
+<section class="corpo__section" id="corporativo">
     <div class="corpo__section--imagen"></div>
 
     <div class="corpo__section--texto">
@@ -187,7 +187,45 @@ Consultanos y coordinamos.</p>
 
 </section>
 
-
+<!-- ===============================================Contactanos==========================================================-->
+<section id="contactanos" class="contactanos__box">
+    <div class="contactanos__formulario">
+        <h2>¿Listo para resolverlo?</h2>
+        <p class="contactanos__subtitulo">Completá el formulario y nos ponemos en contacto a la brevedad para ofrecerte la mejor solución.</p>
+        
+        <!-- ACA PROGRAMAR EL ENVÍO DE MAIL: Conectá este formulario a tu backend (PHP, Node.js, etc.) para que los datos lleguen a tu correo electrónico -->
+        <form class="formulario-contacto" action="#" method="POST">
+            <div class="campo">
+                <label for="nombre">Nombre y Apellido</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez" required>
+            </div>
+            <div class="campo">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+            </div>
+            <div class="campo">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+54 9 11 1234 5678" required>
+            </div>
+            <div class="campo campo--textarea">
+                <label for="solicitud">Tu solicitud o consulta</label>
+                <textarea id="solicitud" name="solicitud" rows="5" placeholder="Contanos qué necesitás: tipo de servicio, localidad, horarios preferidos..." required></textarea>
+            </div>
+            <button type="submit" class="btn-enviar">Enviar Solicitud</button>
+        </form>
+    </div>
+    
+    <div class="contactanos__whatsapp">
+        <div class="whatsapp__contenido">
+            <h2>¿Querés hablar ahora?</h2>
+            <p>Escríbenos por WhatsApp y un especialista te asesorá sin cargo. Atendemos urgencias las 24 hs.</p>
+            <a href="https://wa.me/5491150064968?text=Hola%20Grupo%20Baires,%20quisiera%20una%20asesoría%20para%20mi%20solicitud." class="btn-whatsapp">
+                <span class="whatsapp__icon">📱</span>
+                Contactar por WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
 
     </main>
     <script>

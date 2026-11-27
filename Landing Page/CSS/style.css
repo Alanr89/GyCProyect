@@ -782,3 +782,172 @@ html {
 .btn-corporativo:active {
     transform: translateY(0);
 }
+
+/* ==========================Sección Contactanos===============================*/
+
+.contactanos__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+    background-color: var(--grisMuyclaro);
+    padding: 6rem 2rem;
+    max-width: 140rem;
+    margin: 0 auto;
+}
+
+/* Formulario */
+.contactanos__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contactanos__formulario h2 {
+    font-size: 2.8rem;
+    color: var(--azulMarino);
+    margin: 0 0 1rem 0;
+}
+
+.contactanos__subtitulo {
+    font-size: 1.6rem;
+    color: var(--azulAcero);
+    margin: 0 0 2rem 0;
+    line-height: 1.6;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.campo label {
+    font-size: 1.5rem;
+    color: var(--azulMarino);
+    font-weight: 600;
+}
+
+.campo input,
+.campo textarea {
+    padding: 1.2rem;
+    font-size: 1.5rem;
+    font-family: inherit;
+    border: 0.2rem solid var(--grisNeutro);
+    border-radius: 0.8rem;
+    background: var(--blanco);
+    transition: border 0.3s ease;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: var(--azulAcero);
+}
+
+.campo--textarea {
+    min-height: 15rem;
+    resize: vertical;
+}
+
+.btn-enviar {
+    background: var(--azulMarino);
+    color: var(--blanco);
+    border: none;
+    padding: 1.4rem 2.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    align-self: flex-start;
+}
+
+.btn-enviar:hover {
+    background: var(--azulAcero);
+    transform: translateY(-2px);
+}
+
+/* WhatsApp lado derecho */
+.contactanos__whatsapp {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--azulMarino);
+    padding: 4rem 3rem;
+    border-radius: 1.5rem;
+    color: var(--blanco);
+    text-align: center;
+    min-height: 30rem;
+}
+
+.contactanos__whatsapp h2 {
+    font-size: 2.4rem;
+    margin: 0 0 1rem 0;
+}
+
+.contactanos__whatsapp p {
+    font-size: 1.5rem;
+    margin: 0 0 2rem 0;
+    opacity: 0.95;
+    line-height: 1.6;
+}
+
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    background: #25d366;
+    color: var(--blanco);
+    text-decoration: none;
+    padding: 1.4rem 2.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border-radius: 0.8rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.btn-whatsapp:hover {
+    background: #1eb754;
+    transform: translateY(-2px);
+}
+
+.whatsapp__icon {
+    font-size: 2rem;
+}
+
+/* Responsive Contactanos */
+@media (max-width: 1024px) {
+    .contactanos__box {
+        grid-template-columns: 1fr;
+        padding: 4rem 1.5rem;
+        gap: 3rem;
+    }
+
+    .contactanos__whatsapp {
+        text-align: center;
+    }
+
+    .btn-enviar,
+    .btn-whatsapp {
+        align-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .contactanos__formulario h2 {
+        font-size: 2.2rem;
+    }
+
+    .contactanos__whatsapp h2 {
+        font-size: 2rem;
+    }
+}
